@@ -310,31 +310,33 @@ img {
 
 /* --- Galerie --- */
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
 .gallery-item {
     position: relative;
-    height: auto;
+    border-radius: 12px;
     overflow: hidden;
-    border-radius: 6px;
-}
-
-.item-large {
-    grid-column: span 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 14px);
+    /* Desktop: 3 items per row approx */
+    background: #000;
 }
 
 .gallery-item img {
     width: 100%;
     height: auto;
+    /* No cropping */
     display: block;
-    transition: 0.5s;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .gallery-item:hover img {
     transform: scale(1.05);
+    opacity: 0.95;
 }
 
 .gallery-item figcaption {
@@ -342,11 +344,22 @@ img {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%);
     color: white;
-    padding: 10px;
-    text-align: center;
-    font-size: 0.9rem;
+    padding: 20px;
+    opacity: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: all 0.4s ease;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1.1rem;
+}
+
+.gallery-item:hover figcaption {
+    opacity: 1;
 }
 
 /* --- Section Extérieur (Vert) --- */
@@ -472,11 +485,31 @@ img {
     }
 
     .gallery-grid {
-        grid-template-columns: 1fr;
+        justify-content: space-between;
+        gap: 15px;
+        /* Smaller gap on mobile */
     }
 
-    .item-large {
-        grid-column: span 1;
+    .gallery-item {
+        /* Mobile: 2 items per row */
+        width: calc(50% - 8px);
+    }
+
+    .gallery-item:nth-child(n) {
+        /* Reset any grid specifics if they existed, though we use flex now */
+    }
+
+    .gallery-item img {
+        height: auto;
+        /* Ensure aspect ratio is kept */
+    }
+
+    .gallery-item figcaption {
+        opacity: 1;
+        /* Always visible on mobile as hover doesn't exist */
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        padding: 10px;
+        font-size: 0.9rem;
     }
 
     .nav-links {
