@@ -323,9 +323,8 @@ img {
 
 /* --- Galerie --- */
 .gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
@@ -334,15 +333,13 @@ img {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: calc(33.333% - 14px);
-    /* Desktop: 3 items per row approx */
-    background: #000;
 }
 
 .gallery-item img {
     width: 100%;
-    height: auto;
-    /* No cropping */
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
     display: block;
     transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -557,23 +554,12 @@ img {
     }
 
     .gallery-grid {
-        justify-content: space-between;
+        grid-template-columns: 1fr;
         gap: 15px;
-        /* Smaller gap on mobile */
-    }
-
-    .gallery-item {
-        /* Mobile: 2 items per row */
-        width: calc(50% - 8px);
-    }
-
-    .gallery-item:nth-child(n) {
-        /* Reset any grid specifics if they existed, though we use flex now */
     }
 
     .gallery-item img {
-        height: auto;
-        /* Ensure aspect ratio is kept */
+        height: 220px;
     }
 
     .gallery-item figcaption {
