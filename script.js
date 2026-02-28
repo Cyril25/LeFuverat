@@ -10,3 +10,5 @@ document.querySelectorAll(".nav-links li a").forEach(n => n.addEventListener("cl
     hamburger.classList.remove("active");
     navLinks.classList.remove("active");
 }));
+
+document.querySelector(".copyright-year").textContent = new Date().getFullYear();

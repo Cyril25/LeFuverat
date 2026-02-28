@@ -7,6 +7,10 @@
     <title>Le Fuverat | Location de vacances Haut-Doubs</title>
     <meta name="description"
         content="Gîte Le Fuverat à Malbuisson/Labergement. Appartement 6 personnes, terrasse, jardin. Proche Lac Saint-Point et Métabief. Idéal été et hiver.">
+    <meta property="og:title" content="Le Fuverat | Location de vacances Haut-Doubs">
+    <meta property="og:description" content="Gîte 6 personnes avec terrasse, jardin et barbecue. À 2 km du Lac Saint-Point et 7 km de Métabief. Idéal familles, été comme hiver.">
+    <meta property="og:image" content="img/accueil-banniere.jpg">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
@@ -24,9 +28,10 @@
                 <li><a href="#galerie">Photos</a></li>
                 <li><a href="#equipements">Équipements</a></li>
                 <li><a href="#activites">Région & Activités</a></li>
+                <li><a href="#reserver">Réserver</a></li>
                 <li><a href="#contact" class="btn-nav">Nous contacter</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" aria-label="Menu" role="button">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -44,7 +49,7 @@
             </p>
             <div class="hero-btns">
                 <a href="#le-logement" class="btn btn-outline">Découvrir le gîte</a>
-                <a href="#contact" class="btn btn-filled">Réserver / Contact</a>
+                <a href="#reserver" class="btn btn-filled">Réserver / Contact</a>
             </div>
         </div>
     </header>
@@ -68,7 +73,7 @@
                 </div>
                 <div class="intro-image">
                     <figure class="modern-image-container">
-                        <img src="img/devant-la-maison-parking.jpg" alt="Extérieur et parking Le Fuverat">
+                        <img src="img/devant-la-maison-parking.jpg" alt="Extérieur et parking Le Fuverat" loading="lazy">
                     </figure>
                 </div>
             </div>
@@ -109,23 +114,23 @@
             </div>
             <div class="gallery-grid">
                 <figure class="gallery-item">
-                    <img src="img/salon.jpg" alt="Salon convivial">
+                    <img src="img/salon.jpg" alt="Salon convivial" loading="lazy">
                     <figcaption>Le Salon</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                    <img src="img/salle-a-manger.jpg" alt="Salle à manger">
+                    <img src="img/salle-a-manger.jpg" alt="Salle à manger" loading="lazy">
                     <figcaption>Cuisine Salle à Manger</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                    <img src="img/chambre-1.jpg" alt="Chambre principale">
+                    <img src="img/chambre-1.jpg" alt="Chambre principale" loading="lazy">
                     <figcaption>Chambre Parentale</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                    <img src="img/chambre-2.jpg" alt="Chambre enfants">
+                    <img src="img/chambre-2.jpg" alt="Chambre enfants" loading="lazy">
                     <figcaption>Chambre Enfants</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                    <img src="img/salle-de-bain.jpg" alt="Salle de bain avec baignoire">
+                    <img src="img/salle-de-bain.jpg" alt="Salle de bain avec baignoire" loading="lazy">
                     <figcaption>Salle de Bain</figcaption>
                 </figure>
             </div>
@@ -137,7 +142,7 @@
             <div class="intro-grid">
                 <div class="intro-image">
                     <figure class="modern-image-container">
-                        <img src="img/terrasse-ete.jpg" alt="Terrasse couverte été">
+                        <img src="img/terrasse-ete.jpg" alt="Terrasse couverte été" loading="lazy">
                     </figure>
                 </div>
                 <div class="intro-text text-white">
@@ -204,7 +209,7 @@
             <div class="activities-grid">
                 <!-- 1. Sport et Sensations (Métabief) -->
                 <div class="activity-card">
-                    <img src="img/telesiege-metabief.jpg" alt="Télésiège Métabief">
+                    <img src="img/telesiege-metabief.jpg" alt="Télésiège Métabief" loading="lazy">
                     <div class="act-content">
                         <h3>La Montagne en toute saison</h3>
                         <p>Profitez du domaine de Métabief à seulement quelques minutes. En hiver, place au ski alpin et
@@ -215,7 +220,7 @@
 
                 <!-- 2. Évasions Nautiques (Lac St Point) -->
                 <div class="activity-card">
-                    <img src="img/activite-nautique.jpg" alt="Activités nautiques Lac Saint-Point">
+                    <img src="img/activite-nautique.jpg" alt="Activités nautiques Lac Saint-Point" loading="lazy">
                     <div class="act-content">
                         <h3>Plaisirs de l'eau</h3>
                         <p>Entre baignades et farniente sur les plages aménagées, découvrez les joies du lac : paddle,
@@ -226,7 +231,7 @@
 
                 <!-- 3. Culture & Histoire (Château de Joux) -->
                 <div class="activity-card">
-                    <img src="img/activite-chateau-de-joux.jpg" alt="Château de Joux">
+                    <img src="img/activite-chateau-de-joux.jpg" alt="Château de Joux" loading="lazy">
                     <div class="act-content">
                         <h3>Un Patrimoine d'exception</h3>
                         <p>Plongez dans l'histoire en visitant l'imposant Château de Joux, sentinelle des montagnes
@@ -237,7 +242,7 @@
 
                 <!-- 4. Immersion Nature (Maison de la Réserve) -->
                 <div class="activity-card">
-                    <img src="img/activite-maison-de-la-reserve.jpg" alt="Réserve Naturelle Remoray">
+                    <img src="img/activite-maison-de-la-reserve.jpg" alt="Réserve Naturelle Remoray" loading="lazy">
                     <div class="act-content">
                         <h3>Nature Sauvage & Grands Espaces</h3>
                         <p>Explorez la Réserve Naturelle du Lac de Remoray et sa Maison de la Réserve pour observer la
@@ -248,7 +253,7 @@
 
                 <!-- 5. Savoir-faire (Obertino) -->
                 <div class="activity-card">
-                    <img src="img/activite-obertino.jpg" alt="Fonderie Obertino">
+                    <img src="img/activite-obertino.jpg" alt="Fonderie Obertino" loading="lazy">
                     <div class="act-content">
                         <h3>Artisanat & Saveurs Comtoises</h3>
                         <p>Partez à la rencontre des artisans locaux : la célèbre fonderie de cloches Obertino, la
@@ -259,7 +264,7 @@
 
                 <!-- 6. Hiver Nordique (Patinoire/Ski fond) -->
                 <div class="activity-card">
-                    <img src="img/article-patinoire-naturelle.jpg" alt="Patinoire naturelle Lac Saint-Point">
+                    <img src="img/article-patinoire-naturelle.jpg" alt="Patinoire naturelle Lac Saint-Point" loading="lazy">
                     <div class="act-content">
                         <h3>L'Espace Nordique & ses Traditions</h3>
                         <p>Bienvenue dans l'un des plus beaux domaines de ski de fond entre Labergement, Mouthe et
@@ -269,8 +274,37 @@
                     </div>
                 </div>
             </div>
-            <div style="text-align:center; margin-top:30px;">
-                <p><em></em></p>
+        </div>
+    </section>
+
+    <section id="reserver" class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Réserver votre séjour</h2>
+                <p>Retrouvez les disponibilités, les tarifs et les avis des voyageurs sur Airbnb</p>
+            </div>
+            <div class="airbnb-cta-box">
+                <div class="airbnb-features">
+                    <div class="airbnb-feature">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>Disponibilités<br>en temps réel</span>
+                    </div>
+                    <div class="airbnb-feature">
+                        <i class="fa-solid fa-tag"></i>
+                        <span>Tarifs<br>détaillés</span>
+                    </div>
+                    <div class="airbnb-feature">
+                        <i class="fa-solid fa-star"></i>
+                        <span>Avis des<br>voyageurs</span>
+                    </div>
+                    <div class="airbnb-feature">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Paiement<br>sécurisé</span>
+                    </div>
+                </div>
+                <a href="https://www.airbnb.fr/rooms/1120050369889965318" target="_blank" rel="noopener noreferrer" class="btn-airbnb">
+                    <i class="fa-brands fa-airbnb"></i> Voir sur Airbnb
+                </a>
             </div>
         </div>
     </section>
@@ -299,7 +333,7 @@
 
     <footer>
         <div class="container footer-content">
-            <p>&copy; 2024 Le Fuverat - Location Saisonnière Haut-Doubs.</p>
+            <p>&copy; <span class="copyright-year"></span> Le Fuverat - Location Saisonnière Haut-Doubs.</p>
         </div>
     </footer>
 

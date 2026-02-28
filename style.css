@@ -182,6 +182,19 @@ img {
     height: 3px;
     margin: 5px auto;
     background-color: var(--color-primary);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* --- Hero --- */
@@ -436,6 +449,65 @@ img {
     color: #666;
 }
 
+/* --- Réservation Airbnb --- */
+.airbnb-cta-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background: white;
+    border-radius: 12px;
+    padding: 50px 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.airbnb-features {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.airbnb-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: var(--color-text);
+    min-width: 120px;
+}
+
+.airbnb-feature i {
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+.btn-airbnb {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #FF5A5F;
+    color: white;
+    padding: 16px 45px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-airbnb:hover {
+    background-color: #e04e53;
+    transform: translateY(-2px);
+}
+
+.btn-airbnb i {
+    font-size: 1.4rem;
+}
+
 /* --- Contact --- */
 .contact-container {
     text-align: center;
@@ -510,6 +582,14 @@ img {
         background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
         padding: 10px;
         font-size: 0.9rem;
+    }
+
+    .airbnb-features {
+        gap: 25px;
+    }
+
+    .airbnb-cta-box {
+        padding: 35px 20px;
     }
 
     .nav-links {
