@@ -622,7 +622,11 @@ img {
     }
 
     .gallery-item figcaption {
-        display: none;
+        opacity: 1;
+        background: none;
+        padding: 10px;
+        font-size: 0.9rem;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
     }
 
     .airbnb-features {
