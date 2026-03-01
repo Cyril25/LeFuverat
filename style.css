@@ -354,8 +354,8 @@ img {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%);
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 100%);
     color: white;
     padding: 20px;
     opacity: 0;
@@ -505,6 +505,64 @@ img {
     font-size: 1.4rem;
 }
 
+/* --- Lightbox --- */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+
+.lightbox.open {
+    display: flex;
+    animation: lightbox-fade 0.25s ease;
+}
+
+@keyframes lightbox-fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 88vh;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    cursor: default;
+    animation: lightbox-zoom 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes lightbox-zoom {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.lightbox-close:hover {
+    opacity: 1;
+}
+
+.gallery-item img {
+    cursor: zoom-in;
+}
+
 /* --- Contact --- */
 .contact-container {
     text-align: center;
@@ -565,7 +623,7 @@ img {
     .gallery-item figcaption {
         opacity: 1;
         /* Always visible on mobile as hover doesn't exist */
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
         padding: 10px;
         font-size: 0.9rem;
     }
